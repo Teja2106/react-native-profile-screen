@@ -1,6 +1,6 @@
 # React Native Profile Screen
 
-## 📐 Design Decisions
+## Design Decisions
 - Built using **React Native + Expo** for fast development and cross-platform support.
 - Implemented a familiar **social-style profile layout** with three content sections: **Posts**, **Clips**, and **Tagged**.
 - Added **swipe navigation** using `react-native-pager-view`, allowing both tab-press and horizontal gestures.
@@ -9,7 +9,7 @@
 
 ---
 
-## 🧪 Mocking Approach
+## Mocking Approach
 - Since the project is in UI-development stage, data is **mocked locally** instead of fetched from an API.
 - The **Posts** section uses a mocked array of local images, displayed in a responsive 3-column grid.
 - **Clips** and **Tagged** currently use placeholder content to demonstrate structure and interaction flow.
@@ -17,7 +17,7 @@
 
 ---
 
-## ⚖️ Trade-offs & Potential Improvements
+## Trade-offs & Potential Improvements
 
 ### Current Trade-offs
 - Local mocked data means performance with large datasets isn’t fully tested.
@@ -38,6 +38,6 @@
 
 ---
 
-## 📝 Summary
+## Summary
 This project establishes a clean and engaging **profile screen experience** with gesture-based navigation, animations, and responsive layout. Mocking enables rapid UI development, and the current architecture provides a strong foundation for future features such as backend integration, video playback, optimized rendering, and advanced theming.
 

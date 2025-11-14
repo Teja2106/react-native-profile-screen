@@ -1,50 +1,43 @@
-# Welcome to your Expo app 👋
+# React Native Profile Screen
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📐 Design Decisions
+- Built using **React Native + Expo** for fast development and cross-platform support.
+- Implemented a familiar **social-style profile layout** with three content sections: **Posts**, **Clips**, and **Tagged**.
+- Added **swipe navigation** using `react-native-pager-view`, allowing both tab-press and horizontal gestures.
+- Integrated **animated underline** and **fade transitions** to provide smooth and polished visual feedback.
+- Used **NativeWind (Tailwind classes)** for clean, maintainable styling and rapid prototyping.
 
-## Get started
+---
 
-1. Install dependencies
+## 🧪 Mocking Approach
+- Since the project is in UI-development stage, data is **mocked locally** instead of fetched from an API.
+- The **Posts** section uses a mocked array of local images, displayed in a responsive 3-column grid.
+- **Clips** and **Tagged** currently use placeholder content to demonstrate structure and interaction flow.
+- Mocking allowed development of animations, gestures, and layout **without backend dependencies**.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## ⚖️ Trade-offs & Potential Improvements
 
-   ```bash
-   npx expo start
-   ```
+### Current Trade-offs
+- Local mocked data means performance with large datasets isn’t fully tested.
+- A simple `ScrollView` is used; virtualized lists (like `FlatList`) were not implemented yet.
+- Media playback in the Clips section is not yet integrated — only static mock content.
+- Some animations may not be fully optimized for low-end devices.
+- Tailwind is fast for prototyping but may limit highly customized styling in the future.
 
-In the output, you'll find options to open the app in a
+### Improvements With More Time
+- Replace mocked posts with **real API integration** and support for large feeds.
+- Implement full **video player functionality** for the Clips section (autoplay, fullscreen, scroll awareness).
+- Build real **Tagged** content view with filtering, preview modals, and backend integration.
+- Optimize animations using **React.memo**, **useMemo**, or **react-native-reanimated** for 60fps performance.
+- Add **dark mode**, richer theming options, and user-customizable appearance.
+- Improve **accessibility** (labels, focus order, dynamic type support).
+- Add automated **unit & integration tests** (Jest + React Native Testing Library).
+- Integrate **analytics and monitoring** for performance, user behavior, and crash reporting.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📝 Summary
+This project establishes a clean and engaging **profile screen experience** with gesture-based navigation, animations, and responsive layout. Mocking enables rapid UI development, and the current architecture provides a strong foundation for future features such as backend integration, video playback, optimized rendering, and advanced theming.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
